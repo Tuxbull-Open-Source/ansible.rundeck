@@ -1,9 +1,10 @@
-- name: "Rundeck | update basic security to have users"
-  lineinfile:
+- name: Rundeck | update basic security to have users
+  ansible.builtin.lineinfile:
     dest: /etc/rundeck/realm.properties
     regexp: "^admin:.*"
     line: "admin: MD5:{{ rundeck_admin_pass | hash('md5') }},user,admin,architect,deploy,build"
     state: present
+  no_log: true
   notify:
     - restart rundeck
 

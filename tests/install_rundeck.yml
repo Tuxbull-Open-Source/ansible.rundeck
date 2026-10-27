@@ -1,10 +1,8 @@
 ---
-- hosts: test-rocky*
+# Syntax-only test playbook. Use an explicitly approved Rocky Linux 9 inventory
+# for live validation; do not run this playbook against localhost for deployment.
+- name: Validate Rundeck role syntax
+  hosts: all
+  gather_facts: false
   roles:
-  - role: joe-speedboat.rundeck
-  tasks:
-  - yum: name=firewalld    
-  - service: name=firewalld enabled=true state=started
-  - firewalld: service=https permanent=true immediate=true state=enabled
-    
-...
+    - role: rundeck

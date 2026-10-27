@@ -1,6 +1,9 @@
 ---
+- name: rundeck | validate required inputs
+  ansible.builtin.include_tasks: 00_validate.yml
+
 - name: rundeck | install base software
-  include_tasks: 10_install.yml
+  ansible.builtin.include_tasks: 10_install.yml
 
 - name: rundeck | configure config files
   include_tasks: 20_configure.yml

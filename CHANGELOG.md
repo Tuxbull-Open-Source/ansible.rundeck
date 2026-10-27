@@ -1,5 +1,22 @@
 # Changelog
 
+## Unreleased
+
+### Security
+
+- Remove usable default Rundeck and MariaDB passwords; require both values from
+  Ansible Vault or another approved secret manager.
+- Validate required secret inputs before role execution and suppress their task
+  output.
+
+### Changed
+
+- Align Galaxy metadata with `tuxbull.rundeck` and the
+  `Tuxbull-Open-Source/ansible.rundeck` source repository.
+- Replace the obsolete test role name with the local `rundeck` role basename.
+- Rewrite role usage documentation and add maintainer instructions for
+  validation, release, and Galaxy import gates.
+
 ## v1.0.0 - 2026-06-26
 
 Initial verified release of the Rundeck role.

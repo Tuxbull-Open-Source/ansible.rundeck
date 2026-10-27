@@ -1,0 +1,10 @@
+---
+- name: rundeck | validate required secret inputs
+  ansible.builtin.assert:
+    that:
+      - rundeck_admin_pass | string | length > 0
+      - mariadb_user_password | string | length > 0
+    fail_msg: >-
+      Set rundeck_admin_pass and mariadb_user_password through Ansible Vault or
+      another approved secret manager before running this role.
+  no_log: true
