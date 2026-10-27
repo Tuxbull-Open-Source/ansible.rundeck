@@ -5,8 +5,9 @@ rundeck_protocol: "https"
 # fqdn that get accessed by web browser
 rundeck_domain: "{{ansible_fqdn}}"
 
-# rundeck web admin password
-rundeck_admin_pass: 'secret'
+# Required Rundeck web administrator password. Supply via Ansible Vault or an
+# approved secret manager; this role intentionally has no usable default.
+rundeck_admin_pass: ''
 
 # plugins to download and install, Ansible get installed by default, this is just an example
 rundeck_plugins: []
@@ -32,8 +33,9 @@ rundeck_manage_firewalld: True
 mariadb_db_host: '127.0.0.1'
 mariadb_db_name: 'rundeck'
 mariadb_db_user: 'rundeck'
-mariadb_root_password: 'p0st1t'
-mariadb_user_password: '.rundeck.'
+# Required Rundeck MariaDB-user password. Supply via Ansible Vault or an
+# approved secret manager; this role intentionally has no usable default.
+mariadb_user_password: ''
 
 # we use nginx reverse proxy
 nginx_ssl_cert_dir: /etc/nginx

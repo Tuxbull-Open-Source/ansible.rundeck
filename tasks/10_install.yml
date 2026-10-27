@@ -1,8 +1,9 @@
 ---
 # Redhat based OS
 - name: mariadb | Install MariaDB role and setup
-  include_role:
+  ansible.builtin.include_role:
     name: joe-speedboat.mariadb
+  no_log: true
   vars:
     mariadb_secure_installation: yes
     mariadb_databases:

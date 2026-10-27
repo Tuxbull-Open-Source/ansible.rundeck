@@ -1,18 +1,20 @@
 ---
 galaxy_info:
-  author: Chris Ruettimann
-  company: Private
-  description: installation and configuration of rundeck
+  namespace: tuxbull
   role_name: rundeck
-  min_ansible_version: 2.11
-  license: GPLv3
+  author: Tuxbull-Open-Source
+  description: Install and configure Rundeck with MariaDB and an Nginx HTTPS proxy
+  license: LGPL-3.0-only
+  min_ansible_version: '2.11'
   platforms:
-  - name: EL
-    versions:
-    - 9
+    - name: EL
+      versions:
+        - '9'
   galaxy_tags:
-  - system
-  - automation
-  - ansible
+    - rundeck
+    - automation
+    - mariadb
+    - nginx
+    - system
 
 dependencies: []
