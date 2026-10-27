@@ -1,4 +1,3 @@
 ---
 roles:
-  - name: joe-speedboat.mariadb
-...
+  - name: tuxbull.mariadb
