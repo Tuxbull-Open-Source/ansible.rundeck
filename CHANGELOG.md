@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Replace the retired `joe-speedboat.mariadb` dependency with the published
+  `tuxbull.mariadb` role for Rundeck database installation and configuration.
+
 ## v1.0.1 - 2026-10-27
 
 ### Security
